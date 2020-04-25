@@ -52,27 +52,43 @@ void main()
 
 
 			double k = log2(fabs(1 + (I2_Gauss5 - I_Gauss5) / (I_NL - I2_Gauss5))); 
+			double I_R = (I2_Gauss5 - I_Gauss5) / (pow(2, k) - 1) + I2_Gauss5;
 			cout << "Gauss5 = " << I_Gauss5 << endl;
 			cout << "|True - Gauss5| = " << fabs(I_NL - I_Gauss5) << endl;
 			cout << "(I2_Gauss5 - I_Gauss5) / (I* - I2_Gauss5) =" << (I2_Gauss5 - I_Gauss5) / (I_NL - I2_Gauss5) << endl;
-			cout << "(I2_Gauss5 - I_Gauss5) / (2^k - 1) =" << (I2_Gauss5 - I_Gauss5) / (pow(2, k) - 1) << endl;
+			cout << "(I2_Gauss5 - I_Gauss5) / (2^k - 1) =" << I_R - I2_Gauss5 << endl;
+			cout << "I_R = " << I_R << endl;
+			cout << "I* - I_R = " << fabs(I_NL - I_R) << endl;
+
 
 			k = log2(fabs(1 + (I2_Gauss4 - I_Gauss4) / (I_NL - I2_Gauss4)));
+			I_R = (I2_Gauss4 - I_Gauss4) / (pow(2, k) - 1) + I2_Gauss4;
 			cout << endl << "Gauss4 = " << I_Gauss4 << endl;
 			cout << "|True - Gauss4| = " << fabs(I_NL - I_Gauss4) << endl;
-			cout << "(I2_Gauss4 - I_Gauss4) / (2^k - 1) =" << (I2_Gauss4 - I_Gauss4) / (pow(2, k) - 1) << endl;
+			cout << "(I2_Gauss4 - I_Gauss4) / (I* - I2_Gauss4) =" << (I2_Gauss4 - I_Gauss4) / (I_NL - I2_Gauss4) << endl;
+			cout << "(I2_Gauss4 - I_Gauss4) / (2^k - 1) =" << I_R - I2_Gauss4 << endl;
+			cout << "I_R = " << I_R << endl;
+			cout << "I* - I_R = " << fabs(I_NL - I_R) << endl;
 
 
 			k = log2(fabs(1 + (I2_Rectangle - I_Rectangle) / (I_NL - I2_Rectangle)));
+			I_R = (I2_Rectangle - I_Rectangle) / (pow(2, k) - 1) + I2_Rectangle;
 			cout << endl << "Rectangle = " << I_Rectangle << endl;
 			cout << "|True - Rectangle| = " << fabs(I_NL - I_Rectangle) << endl;
-			cout << "(I2_Rectangle - I_Rectangle) / (2^k - 1) =" << (I2_Rectangle - I_Rectangle) / (pow(2, k) - 1) << endl;
+			cout << "(I2_Rectangle - I_Rectangle) / (I* - I2_Rectangle) =" << (I2_Rectangle - I_Rectangle) / (I_NL - I2_Rectangle) << endl;
+			cout << "(I2_Rectangle - I_Rectangle) / (2^k - 1) =" << I_R - I2_Rectangle << endl;
+			cout << "I_R = " << I_R << endl;
+			cout << "I* - I_R = " << fabs(I_NL - I_R) << endl;
 
 
 			k = log2(fabs(1 + (I2_NK - I_NK) / (I_NL - I2_NK)));
+			I_R = (I2_NK - I_NK) / (pow(2, k) - 1) + I2_NK;
 			cout << endl << "Trapeze = " << I_NK << endl;
 			cout << "|True - Trapeze| = " << fabs(I_NL - I_NK) << endl;
-			cout << "(I2_Trapeze - I_Trapeze) / (2^k - 1) =" << (I2_NK - I_NK) / (pow(2, k) - 1) << endl;
+			cout << "(I2_Trapeze- I_Trapeze) / (I* - I2_Trapeze) =" << (I2_NK - I_NK) / (I_NL - I2_NK) << endl;
+			cout << "(I2_Trapeze - I_Trapeze) / (2^k - 1) =" << I_R - I2_NK << endl;
+			cout << "I_R = " << I_R << endl;
+			cout << "I* - I_R = " << fabs(I_NL - I_R) << endl;
 
 			cout << endl;
 
@@ -94,4 +110,4 @@ void main()
 
    	 //..//
 
-///ÏÏÏÏÏÏÏÏÏÏÏ////
+///ÃÃÃÃÃÃÃÃÃÃÃ////
